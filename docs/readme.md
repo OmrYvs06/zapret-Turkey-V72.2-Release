@@ -46,5 +46,44 @@ sudo bash /opt/zapret/install_easy.sh
 ```
 
 
+# Extras
+if you want to install dnscrypt-proxy, you can follow [this](https://btt.community/t/linux-zapret-kurulum-rehberi/15989) guide
+## here is the guide using dnscrypt-proxy for the system uses systemd-resolved
+### installing dnscrypt-proxy
 
+**Arch Linux**: `sudo pacman -S dnscrypt-proxy` </br>
+**Fedora**: `sudo dnf install dnscrypt-proxy` </br>
+**OpenSUSE**: `sudo zypper in dnscrypt-proxy` </br>
+**Alpine Linux**: `sudo apk add dnscrypt-proxy` </br>
+**Void Linux**: `sudo xbps-install -S dnscrypt-proxy` </br>
+**Gentoo**: `emerge dnscrypt-proxy`
 
+### edit dnscrypt-proxy config file
+```bash
+sudo nano /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+```
+edit or add this lines
+```bash
+listen_addresses = ['127.0.0.1:53', '[::1]:53']
+```
+### enabling dnscrypt-proxy
+```bash
+sudo systemctl enable dnscrypt-proxy.service
+sudo systemctl start dnscrypt-proxy.service
+```
+
+### setting up systemd resolved.conf file: open resolved.conf file
+```bash
+sudo nano /etc/systemd/resolved.conf
+```
+edit or add this lines
+```bash
+[Resolve]
+DNS=127.0.0.1 ::1
+EDNS0=yes
+Domains=~.
+```
+### restart systemd-resolved
+```
+sudo systemctl restart systemd-resolved
+```
