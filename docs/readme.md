@@ -45,20 +45,6 @@ rm -rf ./zapret-Turkey-V72.2-Release && \
 sudo bash /opt/zapret/install_easy.sh
 ```
 
-# Frequently Asked Questions
-## Why we are gonna trust you?
-Well, its my personal stuff after all, I made this script for easy installation for myself. </br> 
-If you have trust issues you have a 2+1 option: </br> 
-Use only `config ` file </br>
-or </br>
-compare all the files with its original release version.</br> 
-or </br>
-just don't instal any file from this github project. (github will hack you!!!)</br> </br>
-
-If you **really** don't trust me, just install `config` file in this project and use it with original zapret project.
-
-
-
 # Extras
 These configurations no needed for zapret usage, but they improve the experience and privacy for system wide.
 ## 1. installing and setting up `dnscrypt-proxy`
@@ -102,6 +88,35 @@ Domains=~.
 ### restart systemd-resolved
 ```bash
 sudo systemctl restart systemd-resolved
+```
+
+# Frequently Asked Questions
+## Why we are gonna trust you?
+Well, its my personal stuff after all, I made this script for easy installation for myself. </br> 
+
+If you a little bit trust me, just install `config` file in this project and use it with original zapret project.</br> 
+
+if you don't, here is the [link](https://github.com/cagritaskn/SplitWire-Turkey/issues/103) that I explained what I did. </br> </br>
+
+
+If you have trust issues you have only 3 options after all:
+- Use only `config` file
+- compare all the files with its original release version.
+- just don't instal any file from this github project. 
+
+## Why are you make this repository in english, isn't it for Turkish people?
+Well, yes. </br>
+But I want it to be global. </br> 
+After all, every person in Turkey can't know Turkish very well. </br>
+Also, if you don't know English or just can't translate this readme.md with any translater or AI tool, </br>
+I think you first need learn how to that. </br>
+Also English is such a basic and global language that every single one of the translator probably translate it to Turkish very well, but can't vice versa. </br>
+Here is my last word:
+```
+after all, 
+my information is just a sand particle in the beach.
+if you want to see the whole beach;
+you need to see every particle with its own perspective.
 ```
 
 
